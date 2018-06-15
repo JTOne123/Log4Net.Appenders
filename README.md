@@ -1,2 +1,2 @@
 # Log4Net.Appenders
-netstandard log4net appenders
+netstandard2.0 compatible log4net appenders
