@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log4Net.Appenders", "Log4Net.Appenders\Log4Net.Appenders.csproj", "{3507A79A-A7A7-43D8-861D-229F2DCB010D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log4Net.Appenders.Tests", "Log4Net.Appenders.Tests\Log4Net.Appenders.Tests.csproj", "{A2847B6D-2A64-484F-845E-C594F309AFD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,17 @@ Global
 		{3507A79A-A7A7-43D8-861D-229F2DCB010D}.Release|x64.Build.0 = Release|Any CPU
 		{3507A79A-A7A7-43D8-861D-229F2DCB010D}.Release|x86.ActiveCfg = Release|Any CPU
 		{3507A79A-A7A7-43D8-861D-229F2DCB010D}.Release|x86.Build.0 = Release|Any CPU
+		{A2847B6D-2A64-484F-845E-C594F309AFD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2847B6D-2A64-484F-845E-C594F309AFD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2847B6D-2A64-484F-845E-C594F309AFD7}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A2847B6D-2A64-484F-845E-C594F309AFD7}.Debug|x64.Build.0 = Debug|Any CPU
+		{A2847B6D-2A64-484F-845E-C594F309AFD7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A2847B6D-2A64-484F-845E-C594F309AFD7}.Debug|x86.Build.0 = Debug|Any CPU
+		{A2847B6D-2A64-484F-845E-C594F309AFD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2847B6D-2A64-484F-845E-C594F309AFD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2847B6D-2A64-484F-845E-C594F309AFD7}.Release|x64.ActiveCfg = Release|Any CPU
+		{A2847B6D-2A64-484F-845E-C594F309AFD7}.Release|x64.Build.0 = Release|Any CPU
+		{A2847B6D-2A64-484F-845E-C594F309AFD7}.Release|x86.ActiveCfg = Release|Any CPU
+		{A2847B6D-2A64-484F-845E-C594F309AFD7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
