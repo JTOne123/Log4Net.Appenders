@@ -1,0 +1,45 @@
+# configuration for master
+-
+  branches:
+    only:
+    - master
+
+  environment:
+    # Set the DOTNET_SKIP_FIRST_TIME_EXPERIENCE environment variable to stop wasting time caching packages
+    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+    # Disable sending usage data to Microsoft
+    DOTNET_CLI_TELEMETRY_OPTOUT: true
+
+  version: 1.0.0.{build}
+  image: Visual Studio 2017
+  configuration: Release
+  install:
+  - cmd: 
+  nuget:
+    disable_publish_on_pr: true
+  build_script:
+  - cmd: >-
+      dotnet --info
+
+      dotnet build Log4Net.Appenders.sln --configuration Release /p:Version=%APPVEYOR_BUILD_VERSION%
+      
+      dotnet pack Log4Net.Appenders\Log4Net.Appenders.csproj --configuration Release --no-build --include-symbols --include-source /p:Version=%APPVEYOR_BUILD_VERSION%
+ 
+      appveyor PushArtifact %APPVEYOR_BUILD_FOLDER%\Log4Net.Appenders\bin\Release\Log4Net.Appenders.%APPVEYOR_BUILD_VERSION%.nupkg
+      
+  test: off
+  test_script:
+  - cmd: >-
+      cd %APPVEYOR_BUILD_FOLDER%
+
+      dotnet test Log4Net.Appenders.Tests\Log4Net.Appenders.Tests.csproj --configuration Release --no-build
+
+  deploy:
+  - provider: NuGet
+    api_key:
+      secure: oy2hcznmpz4taxqf4hrqlesgt3uly5pexi7rbbxfkram4u
+    skip_symbols: false
+    on:
+      # Only publish from the master branch
+      branch: master
+      appveyor_repo_tag: true
