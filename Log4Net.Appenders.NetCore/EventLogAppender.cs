@@ -7,7 +7,7 @@ using log4net.Core;
 using log4net.Util;
 using SecurityContext = log4net.Core.SecurityContext;
 
-namespace Log4Net.Appenders
+namespace Log4Net.Appenders.NetCore
 {
     /// <summary>
     /// EventLogAppender sourced from the log4net repo but repackaged to be usable in netstandard2.0 projects

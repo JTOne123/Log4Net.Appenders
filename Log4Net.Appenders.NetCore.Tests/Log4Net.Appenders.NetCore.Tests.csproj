@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Log4Net.Appenders\Log4Net.Appenders.csproj" />
+    <ProjectReference Include="..\Log4Net.Appenders.NetCore\Log4Net.Appenders.NetCore.csproj" />
   </ItemGroup>
 
 </Project>

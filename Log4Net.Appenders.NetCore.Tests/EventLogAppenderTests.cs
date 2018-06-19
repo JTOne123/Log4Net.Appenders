@@ -6,11 +6,9 @@ using log4net.Appender;
 using log4net.Config;
 using log4net.Core;
 using log4net.Layout;
-using log4net.Repository;
-using log4net.Repository.Hierarchy;
 using Xunit;
 
-namespace Log4Net.Appenders.Tests
+namespace Log4Net.Appenders.NetCore.Tests
 {
     /// <summary>
     ///     Used for internal unit testing the <see cref="EventLogAppender" /> class.
@@ -30,7 +28,8 @@ namespace Log4Net.Appenders.Tests
             return target.GetType().GetTypeInfo().GetDeclaredMethod(name).Invoke(target, args);
         }
 
-        [Fact(Skip = "Need to first create an event source via powershell before running...  New-EventLog -LogName Application -Source xUnit")]
+        [Fact(Skip =
+            "Need to first create an event source via powershell before running...  New-EventLog -LogName Application -Source xUnit")]
         public void Integration()
         {
             var rep = LogManager.CreateRepository(Guid.NewGuid().ToString());
