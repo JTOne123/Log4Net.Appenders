@@ -23,16 +23,16 @@
 
       dotnet build Log4Net.Appenders.NetCore.sln --configuration Release /p:Version=%APPVEYOR_BUILD_VERSION%
       
-      dotnet pack Log4Net.Appenders\Log4Net.Appenders.NetCore.csproj --configuration Release --no-build --include-symbols --include-source /p:Version=%APPVEYOR_BUILD_VERSION%
+      dotnet pack Log4Net.Appenders.NetCore\Log4Net.Appenders.NetCore.csproj --configuration Release --no-build --include-symbols --include-source /p:Version=%APPVEYOR_BUILD_VERSION%
  
-      appveyor PushArtifact %APPVEYOR_BUILD_FOLDER%\Log4Net.Appenders\bin\Release\Log4Net.Appenders.NetCore.%APPVEYOR_BUILD_VERSION%.nupkg
+      appveyor PushArtifact %APPVEYOR_BUILD_FOLDER%\Log4Net.Appenders.NetCore\bin\Release\Log4Net.Appenders.NetCore.%APPVEYOR_BUILD_VERSION%.nupkg
       
   test: off
   test_script:
   - cmd: >-
       cd %APPVEYOR_BUILD_FOLDER%
 
-      dotnet test Log4Net.Appenders.Tests\Log4Net.Appenders.Tests.csproj --configuration Release --no-build
+      dotnet test Log4Net.Appenders.NetCore.Tests\Log4Net.Appenders.NetCore.Tests.csproj --configuration Release --no-build
 
   deploy:
   - provider: NuGet
