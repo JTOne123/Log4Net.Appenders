@@ -25,7 +25,7 @@
       
       dotnet pack Log4Net.Appenders\Log4Net.Appenders.csproj --configuration Release --no-build --include-symbols --include-source /p:Version=%APPVEYOR_BUILD_VERSION%
  
-      appveyor PushArtifact %APPVEYOR_BUILD_FOLDER%\Log4Net.Appenders\bin\Release\Log4Net.Appenders.%APPVEYOR_BUILD_VERSION%.nupkg
+      appveyor PushArtifact %APPVEYOR_BUILD_FOLDER%\Log4Net.Appenders\bin\Release\Log4Net.Appenders.NetCore.%APPVEYOR_BUILD_VERSION%.nupkg
       
   test: off
   test_script:
