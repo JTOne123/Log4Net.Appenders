@@ -9,4 +9,18 @@
     <PackageReference Include="System.Diagnostics.EventLog" Version="4.5.0" />
   </ItemGroup>
 
+<PropertyGroup>
+    <Authors>Jonathan Robson</Authors>
+    <Owners>Jonathan Robson</Owners>
+    <Title>Log4Net.Appenders.NetCore</Title>
+    <PackageLicenseUrl>http://opensource.org/licenses/MIT</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/robsonj/Log4Net.Appenders</PackageProjectUrl>
+    <Description>.Net Standard 2.0 compatible Log4Net appenders</Description>
+    <Copyright>Copyright Jonathan Robson 2018</Copyright>
+    <Tags>log4net eventlog netstandard2.0 logging appender</Tags>
+    <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
+    <RepositoryUrl>https://github.com/robsonj/Log4Net.Appenders</RepositoryUrl>
+    <PackageTags>log4net eventlog netstandard2.0 logging appender</PackageTags>
+  </PropertyGroup>
+
 </Project>
